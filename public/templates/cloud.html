@@ -1,0 +1,14 @@
+<div class="container">
+	<tweetlayer 
+		ng-repeat="layer in cloud" 
+		show-search="showSearch(keywords)" 
+		></tweetlayer>
+</div>
+<search pos="{'top':'50%', 'left':'50%'}" keywords="searchKeywords" load-search="loadTweets()"></search>
+<cloud-navigation 
+	back-keywords="cloudIndex > 0 ? cloud[cloudIndex-1].keywords : ''"
+	forward-keywords="cloudIndex < cloud.length ? cloud[cloudIndex].keywords : ''"
+	go-back="moveLayer(-1)"
+	go-forward="moveLayer(1)" 
+	can-go-forward="cloudIndex < cloud.length-1"
+	can-go-back="cloudIndex > 0"></could-navigation>

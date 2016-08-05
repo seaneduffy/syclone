@@ -1,0 +1,8 @@
+<div style="{{position}}">
+	<div ng-style="{'background-image': 'url(' + profileBannerUrl + ')'}">
+		<span class="profile" ng-style="{'background-image': 'url(' + profileImageUrl + ')'}"></span>
+		<span class="name" ng-bind="userName"></span>
+		<span class="screenname" ng-bind="userScreenname"></span>
+		<selecttext class="text" ng-bind="text" selected="searchKeywords" text-selected="showSearch()"></selecttext>
+	</div>
+</div>

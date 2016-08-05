@@ -1,0 +1,25 @@
+{
+  "name": "syclone",
+  "version": "0.0.1",
+  "description": "Web application that allows the user to view recent tweets from their timeline arranged by keyword.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sean E. Duffy",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.14.0",
+    "grunt": "^1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-compass": "^1.1.1"
+  },
+  "dependencies": {
+    "cookie-session": "^2.0.0-alpha.1",
+    "express-session": "^1.14.0",
+    "mongoose": "^4.5.7",
+    "node-twitter-api": "^1.7.4",
+    "request": "^2.74.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "syclone",
+  "description": "Web application that allows the user to view recent tweets from their timeline arranged by keyword.",
+  "main": "index.js",
+  "authors": [
+    "Sean E. Duffy"
+  ],
+  "license": "MIT",
+  "homepage": "syclone.seaneduffy.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8"
+  }
+}

@@ -1,0 +1,318 @@
+/* line 10, ../../src/main.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 1vw;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 18, ../../src/main.scss */
+body {
+  font-family: Roboto, sans-serif;
+  background: #d9e4f9;
+  background: -moz-radial-gradient(center, ellipse cover, #d9e4f9 0%, #5caeed 84%, #5caeed 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #d9e4f9 0%, #5caeed 84%, #5caeed 100%);
+  background: radial-gradient(ellipse at center, #d9e4f9 0%, #5caeed 84%, #5caeed 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9e4f9', endColorstr='#5caeed',GradientType=1 );
+}
+
+/* line 27, ../../src/main.scss */
+input, button {
+  font-family: Roboto, sans-serif;
+  cursor: pointer;
+}
+
+/* line 33, ../../src/main.scss */
+.cloud #landing {
+  display: none;
+}
+
+/* line 40, ../../src/main.scss */
+search .container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+/* line 45, ../../src/main.scss */
+search .container input {
+  display: block;
+  font-size: 3em;
+  width: 20em;
+  height: 2em;
+}
+/* line 52, ../../src/main.scss */
+search .container button {
+  margin: 1em auto 0;
+  color: white;
+  display: block;
+  width: 4em;
+  height: 2em;
+  font-size: 3em;
+  border: .14em solid #929292;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#827a8c+0,afa9b2+40,a69db7+65,a8a2ad+100 */
+  background: #827a8c;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #827a8c 0%, #afa9b2 40%, #a69db7 65%, #a8a2ad 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #827a8c 0%, #afa9b2 40%, #a69db7 65%, #a8a2ad 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #827a8c 0%, #afa9b2 40%, #a69db7 65%, #a8a2ad 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#827a8c', endColorstr='#a8a2ad',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+/* line 70, ../../src/main.scss */
+.cloud search .container {
+  z-index: 100;
+}
+/* line 74, ../../src/main.scss */
+.cloud search .container input {
+  font-size: 2em;
+  width: 15em;
+}
+/* line 78, ../../src/main.scss */
+.cloud search .container button {
+  font-size: 2em;
+}
+
+/* line 86, ../../src/main.scss */
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* line 94, ../../src/main.scss */
+cloud > .container {
+  width: 100vw;
+  height: 100vw;
+}
+/* line 98, ../../src/main.scss */
+.landing cloud > .container {
+  display: none;
+}
+/* line 104, ../../src/main.scss */
+cloud search .container {
+  display: none;
+}
+/* line 107, ../../src/main.scss */
+.search cloud search .container {
+  display: block;
+}
+
+/* line 116, ../../src/main.scss */
+tweetlayer ul {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+}
+/* line 122, ../../src/main.scss */
+tweetlayer ul.prevToCurr {
+  z-index: 1;
+}
+/* line 125, ../../src/main.scss */
+tweetlayer ul.prevToCurr tweet > div > div {
+  animation: prevtocurr 1s linear forwards;
+}
+/* line 129, ../../src/main.scss */
+tweetlayer ul.nextToCurr {
+  z-index: 1;
+}
+/* line 131, ../../src/main.scss */
+tweetlayer ul.nextToCurr tweet > div > div {
+  animation: nexttocurr 1s linear forwards;
+}
+/* line 135, ../../src/main.scss */
+tweetlayer ul.currToPrev {
+  pointer-events: none;
+  z-index: 0;
+}
+/* line 138, ../../src/main.scss */
+tweetlayer ul.currToPrev tweet > div > div {
+  animation: currtoprev 1s linear forwards;
+}
+/* line 142, ../../src/main.scss */
+tweetlayer ul.currToNext {
+  pointer-events: none;
+  z-index: 2;
+}
+/* line 145, ../../src/main.scss */
+tweetlayer ul.currToNext tweet > div > div {
+  animation: currtonext 1s linear forwards;
+}
+
+/* line 155, ../../src/main.scss */
+tweet > div {
+  position: absolute;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+}
+/* line 161, ../../src/main.scss */
+tweet > div > div {
+  width: 16em;
+  height: 13em;
+  overflow: hidden;
+  display: block;
+  font-size: 10px;
+  font-family: Roboto, sans-serif;
+  padding: .5em;
+  box-sizing: border-box;
+  background-color: white;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+/* line 178, ../../src/main.scss */
+tweet > div > div > span {
+  display: block;
+}
+/* line 183, ../../src/main.scss */
+tweet > div:hover {
+  z-index: 100;
+}
+/* line 186, ../../src/main.scss */
+tweet > div:hover > div {
+  width: 13em;
+  height: 11em;
+  overflow: scroll;
+  display: block;
+  font-size: 1.6em;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 20px;
+  z-index: 100;
+}
+@media all and (min-width: 960px) {
+  /* line 198, ../../src/main.scss */
+  tweet > div:hover > div {
+    font-size: 15px;
+  }
+}
+@media all and (max-width: 749px) {
+  /* line 204, ../../src/main.scss */
+  tweet > div:hover > div {
+    font-size: 12px;
+  }
+}
+/* line 212, ../../src/main.scss */
+tweet .profile {
+  width: 100%;
+  height: 40%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+/* line 220, ../../src/main.scss */
+tweet .name {
+  color: #333;
+  background: white;
+  font-weight: bold;
+}
+/* line 226, ../../src/main.scss */
+tweet .screenname {
+  color: #787878;
+  background: white;
+}
+/* line 231, ../../src/main.scss */
+tweet .text {
+  color: #212121;
+  background: white;
+}
+/* line 236, ../../src/main.scss */
+tweet .name, tweet .screenname, tweet .text {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 247, ../../src/main.scss */
+cloud-navigation .container {
+  position: absolute;
+  bottom: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* line 255, ../../src/main.scss */
+selecttext {
+  background: blue;
+}
+/* line 259, ../../src/main.scss */
+selecttext span {
+  cursor: pointer;
+}
+/* line 263, ../../src/main.scss */
+selecttext span.highlight {
+  background: #a4f75e;
+}
+
+@keyframes prevtocurr {
+  from {
+    height: 0.65em;
+    width: 0.8em;
+    opacity: 0;
+    display: none;
+  }
+  to {
+    height: 13em;
+    width: 16em;
+    opacity: 1;
+    display: block;
+  }
+}
+@keyframes currtoprev {
+  from {
+    height: 13em;
+    width: 16em;
+    opacity: 1;
+    display: block;
+  }
+  to {
+    height: 0.65em;
+    width: 0.8em;
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes currtonext {
+  from {
+    height: 13em;
+    width: 16em;
+    opacity: 1;
+    display: block;
+  }
+  to {
+    height: 65em;
+    width: 80em;
+    opacity: 0;
+    display: none;
+  }
+}
+@keyframes nexttocurr {
+  from {
+    height: 65em;
+    width: 80em;
+    opacity: 0;
+    display: none;
+  }
+  to {
+    height: 13em;
+    width: 16em;
+    opacity: 1;
+    display: block;
+  }
+}
+@keyframes out {
+  from {
+    display: none;
+  }
+  to {
+    display: none;
+  }
+}

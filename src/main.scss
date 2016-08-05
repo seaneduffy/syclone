@@ -1,0 +1,331 @@
+$tweetWidth: 16em;
+$tweetHeight: 13em;
+$tweetWidthOn: 13em;
+$tweetHeightOn: 11em;
+$tweetWidthPrev: $tweetWidth / 20;
+$tweetHeightPrev: $tweetHeight / 20;
+$tweetWidthNext: $tweetWidth * 5;
+$tweetHeightNext: $tweetHeight * 5;
+
+html, body {
+	margin: 0;
+	padding: 0;
+	font-size: 1vw;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: Roboto, sans-serif;
+	background: #d9e4f9;
+	background: -moz-radial-gradient(center, ellipse cover, #d9e4f9 0%, #5caeed 84%, #5caeed 100%);
+	background: -webkit-radial-gradient(center, ellipse cover, #d9e4f9 0%,#5caeed 84%,#5caeed 100%);
+	background: radial-gradient(ellipse at center, #d9e4f9 0%,#5caeed 84%,#5caeed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d9e4f9', endColorstr='#5caeed',GradientType=1 );
+}
+
+input, button {
+	font-family: Roboto, sans-serif;
+	cursor: pointer;
+}
+
+#landing {
+	.cloud & {
+		display: none;
+	}
+}
+
+search {
+	
+	.container {
+		
+		position: absolute;
+		transform: translate(-50%, -50%);
+		
+		input {
+			display: block;
+			font-size: 3em;
+			width: 20em;
+			height: 2em;
+		}
+		
+		button {
+			margin: 1em auto 0;
+			color: white;
+			display: block;
+			width: 4em;
+			height: 2em;
+			font-size: 3em;
+			border: .14em solid #929292;
+			
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#827a8c+0,afa9b2+40,a69db7+65,a8a2ad+100 */
+			background: #827a8c; /* Old browsers */
+			background: -moz-linear-gradient(-45deg,  #827a8c 0%, #afa9b2 40%, #a69db7 65%, #a8a2ad 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(-45deg,  #827a8c 0%,#afa9b2 40%,#a69db7 65%,#a8a2ad 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(135deg,  #827a8c 0%,#afa9b2 40%,#a69db7 65%,#a8a2ad 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#827a8c', endColorstr='#a8a2ad',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			
+		}
+		
+		.cloud & {
+			
+			z-index: 100;
+			
+			input {
+				font-size: 2em;
+				width: 15em;
+			}
+			button {
+				font-size: 2em;
+			}
+		}
+		
+	}
+}
+
+ul, li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+cloud {
+	
+	& > .container {
+		width: 100vw;
+		height: 100vw;
+		
+		.landing & {
+			display: none;
+		}
+	}
+	
+	search {
+		.container {
+			display: none;
+			
+			.search & {
+				display: block;
+			}
+		}
+	}
+}
+
+tweetlayer {
+	
+	ul {
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		
+		&.prevToCurr {
+			z-index: 1;
+			
+			tweet > div > div {
+				animation: prevtocurr 1s linear forwards;
+			}
+		}
+		&.nextToCurr {
+			z-index: 1;
+			tweet > div > div {
+				animation: nexttocurr 1s linear forwards;
+			}
+		}
+		&.currToPrev {
+			pointer-events: none;
+			z-index: 0;
+			tweet > div > div {
+				animation: currtoprev 1s linear forwards;
+			}
+		}
+		&.currToNext {
+			pointer-events: none;
+			z-index: 2;
+			tweet > div > div {
+				animation: currtonext 1s linear forwards;
+			}
+		}
+	}
+	
+}
+
+tweet {
+	
+	& > div {
+		
+		position: absolute;
+		z-index: 0;
+		transform: translate(-50%, -50%);
+		
+		& > div {
+			width: $tweetWidth;
+			height: $tweetHeight;
+			overflow: hidden;
+			display: block;
+			font-size: 10px;
+			font-family: Roboto, sans-serif;
+			padding: .5em;
+			box-sizing: border-box;
+			background-color: white;
+			background-size: contain;
+			background-repeat: no-repeat;
+			border-radius: 10px;
+			-webkit-transition: all .2s;
+			transition: all .2s;
+			
+			
+			& > span {
+				display: block;
+			}
+		}
+		
+		&:hover {
+			z-index: 100;
+			
+			& > div {
+				width: $tweetWidthOn;
+				height: $tweetHeightOn;
+				overflow: scroll;
+				display: block;
+				font-size: 1.6em;
+				padding: 1em;
+				box-sizing: border-box;
+				border-radius: 20px;
+				z-index: 100;
+
+				@media all and (min-width: 960px) {
+					& {
+						font-size: 15px;
+					}
+				}
+
+				@media all and (max-width: 749px) {
+					& {
+						font-size: 12px;
+					}
+				}
+			}
+		}
+	}
+	
+	.profile {
+		width: 100%;
+		height: 40%;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin: 0 auto;
+	}
+	
+	.name {
+		color: #333;
+		background: white;
+		font-weight: bold;
+	}
+	
+	.screenname {
+		color: #787878;
+		background: white;
+	}
+	
+	.text {
+		color: #212121;
+		background: white;
+	}
+	
+	.name, .screenname, .text {
+		-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+}
+
+cloud-navigation {
+	.container {
+		position: absolute;
+		bottom: 2em;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+selecttext {
+	
+	background: blue;
+	
+	span {
+		cursor: pointer;
+	}
+	
+	span.highlight {
+		background: #a4f75e;
+	}
+}
+
+@keyframes prevtocurr {
+	from {
+		height: $tweetHeightPrev;
+		width: $tweetWidthPrev;
+		opacity: 0;
+		display: none;
+	}
+	to {
+		height: $tweetHeight;
+		width: $tweetWidth;
+		opacity: 1;
+		display: block;
+	}
+}
+@keyframes currtoprev {
+	from {
+		height: $tweetHeight;
+		width: $tweetWidth;
+		opacity: 1;
+		display: block;
+	}
+	to {
+		height: $tweetHeightPrev;
+		width: $tweetWidthPrev;
+		opacity: 0;
+		display: none;
+	}
+}
+@keyframes currtonext {
+	from {
+		height: $tweetHeight;
+		width: $tweetWidth;
+		opacity: 1;
+		display: block;
+	}
+	to {
+		height: $tweetHeightNext;
+		width: $tweetWidthNext;
+		opacity: 0;
+		display: none;
+	}
+}
+@keyframes nexttocurr {
+	from {
+		height: $tweetHeightNext;
+		width: $tweetWidthNext;
+		opacity: 0;
+		display: none;
+	}
+	to {
+		height: $tweetHeight;
+		width: $tweetWidth;
+		opacity: 1;
+		display: block;
+	}
+}
+@keyframes out {
+	from {
+		display: none;
+	}
+	to {
+		display: none;
+	}
+}

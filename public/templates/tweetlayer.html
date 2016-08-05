@@ -1,0 +1,14 @@
+<ul ng-style="{'z-index': $index}" class="{{layer.position}}">
+	<li ng-repeat="tweet in layer.tweets">
+		<tweet
+			profile-banner-url="{{tweet.profile_banner_url}}"
+			profile-image-url="{{tweet.profile_image_url}}"
+			user-screenname="{{tweet.user_screenname}}"
+			user-name="{{tweet.user_name}}"
+			text="{{tweet.text}}"
+			tweet-index="{{$index}}"
+			search-keywords="searchKeywords" 
+			show-search="showSearch()"
+		></tweet>
+	</li>
+</ul>
